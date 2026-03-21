@@ -14,8 +14,8 @@ source "${HOME}/miniforge3/etc/profile.d/conda.sh"
 conda activate
 conda create -n flask-env python=3.13 -y
 conda activate flask-env
-conda install flask -y
+conda install flask gunicorn -y
 conda create -n fastapi-env python=3.13 -y
 conda activate fastapi-env
-conda install fastapi -y
+conda install fastapi gunicorn uvicorn[standard] -y
 conda activate
