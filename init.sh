@@ -1,3 +1,20 @@
+sudo fallocate -l 3G /swapfile
+sudo chmod 600 /swapfile
+sudo mkswap /swapfile
+sudo swapon /swapfile
+echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab
+free -h 
+
+sudo iptables-save > iptables.backup
+sudo iptables -P INPUT ACCEPT
+sudo iptables -P FORWARD ACCEPT
+sudo iptables -P OUTPUT ACCEPT
+sudo systemctl stop iptables
+sudo systemctl disable iptables
+sudo iptables -L
+sudo iptables -F
+
+
 sudo apt update
 sudo apt install wget nano net-tools nginx -y
 
