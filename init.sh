@@ -1,11 +1,11 @@
-apt update
-apt install wget nano net-tools nginx -y
+sudo apt update
+sudo apt install wget nano net-tools nginx -y
 
 mkdir ~/miniforge
 cd ~/miniforge
 
 # curl -L -O "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-$(uname)-$(uname -m).sh"
-wget -O Miniforge3.sh "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-$(uname)-$(uname -m).sh"
+wget -O "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-$(uname)-$(uname -m).sh"
 bash Miniforge3-$(uname)-$(uname -m).sh -b
 # wget -O Miniforge3.sh "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-$(uname)-$(uname -m).sh"
 # mkdir -p "${HOME}/conda"
